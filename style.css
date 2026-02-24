@@ -58,8 +58,8 @@ body{
 }
 
 .logo-wrap{
-  width: 62px;
-  height: 62px;
+  width: 52px;
+  height: 52px;
   border-radius: 18px;
   background: rgba(255,255,255,.06);
   border: 1px solid rgba(255,255,255,.14);
@@ -69,8 +69,8 @@ body{
 }
 
 .logo{
-  width: 44px;   /* <<< logo pequeno e elegante */
-  height: 44px;
+  width: 32px;   /* <<< logo pequeno e elegante */
+  height: 32px;
   object-fit: contain;
   display:block;
 }
