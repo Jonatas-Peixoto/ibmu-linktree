@@ -64,8 +64,8 @@ body{
 }
 
 .logo{
-  width: 52px;   /* <<< logo pequeno e elegante */
-  height: 52px;
+  width: 72px;   /* <<< logo pequeno e elegante */
+  height: 72px;
   object-fit: contain;
   display:block;
 }
@@ -152,4 +152,10 @@ body{
 
 .footer small{
   color: rgba(255,255,255,.55);
+}
+
+.icon-img{
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
