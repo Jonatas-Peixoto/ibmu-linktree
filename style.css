@@ -30,6 +30,25 @@ body{
   padding: 22px;
 }
 
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  background: url("./assets/background.jpg") center/cover no-repeat;
+  filter: blur(10px);
+  transform: scale(1.06); 
+  opacity: 0.35;         
+  z-index: -2;
+}
+
+body::after{
+  content:"";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(7,10,18,.65), rgba(11,16,34,.75));
+  z-index: -1;
+}
+
 .bg{
   position: fixed;
   inset: 0;
@@ -57,6 +76,13 @@ body{
   padding: 8px 8px 6px;
 }
 
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .logo-wrap{
   display:flex;
   align-items:center;
@@ -64,7 +90,7 @@ body{
 }
 
 .logo{
-  width: 72px;   /* <<< logo pequeno e elegante */
+  width: 72px;   
   height: 72px;
   object-fit: contain;
   display:block;
@@ -158,4 +184,9 @@ body{
   width: 22px;
   height: 22px;
   object-fit: contain;
+}
+
+.icon-img.site{
+    width: 26px;
+    height: 26px;
 }
