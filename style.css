@@ -58,14 +58,9 @@ body{
 }
 
 .logo-wrap{
-  width: 62px;
-  height: 62px;
-  border-radius: 18px;
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.14);
-  display:grid;
-  place-items:center;
-  flex: 0 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .logo{
