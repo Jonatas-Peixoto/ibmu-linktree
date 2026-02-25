@@ -117,17 +117,40 @@ body::after{
 
 .btn{
   position: relative;
-  display:flex;
-  align-items:center;
-  /*gap: 12px;*/
+  display: block; 
   padding: 16px 20px;
   border-radius: var(--radius);
   border: 1px solid rgba(255,255,255,.14);
   background: rgba(255,255,255,.06);
   color: var(--text);
-  text-decoration:none;
+  text-decoration: none;
   font-weight: 650;
   transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.btn-icon{
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+}
+
+.btn-icon img{
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+.btn-text{
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .btn:hover{
@@ -140,22 +163,6 @@ body::after{
   transform: translateY(0px);
 }
 
-.btn .icon{
-  width: 28px;
-  height: 28px;
-  display:grid;
-  place-items:center;
-  border-radius: 10px;
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.10);
-  flex: 0 0 auto;
-}
-
-.btn .text{
-  width: 100%;
-  text-align: center;
-  display: block;
-}
 
 .btn .chev{
   opacity: .7;
