@@ -119,7 +119,7 @@ body::after{
   position: relative;
   display:flex;
   align-items:center;
-  gap: 12px;
+  /*gap: 12px;*/
   padding: 16px 20px;
   border-radius: var(--radius);
   border: 1px solid rgba(255,255,255,.14);
