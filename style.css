@@ -90,8 +90,8 @@ body::after{
 }
 
 .logo{
-  width: 100px;   
-  height: 100px;
+  width: 72px;   
+  height: 72px;
   object-fit: contain;
   display:block;
 }
