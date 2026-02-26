@@ -155,7 +155,7 @@ body::after{
 
 .btn:hover{
   transform: translateY(-1px);
-  background: rgba(255,255,255,.09);
+  background: rgba(247, 112, 3, 0.144);
   border-color: rgba(255,255,255,.22);
 }
 
@@ -170,7 +170,7 @@ body::after{
 
 .btn.primary{
   background: linear-gradient(135deg, rgba(var(--accent), .26), rgba(var(--accent2), .18));
-  border-color: rgba(255,255,255,.22);
+  border-color: rgba(2247, 112, 3, 0.144);
 }
 
 .footer{
