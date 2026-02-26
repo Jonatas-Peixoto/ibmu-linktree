@@ -53,8 +53,8 @@ body::after{
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(700px 450px at 30% 110%, rgba(255,255,255,.06), transparent 60%),
-    radial-gradient(600px 400px at 110% 30%, rgba(255,255,255,.05), transparent 55%);
+    radial-gradient(700px 450px at 30% 110%, rgba(247, 112, 3, 0.144), transparent 60%),
+    radial-gradient(600px 400px at 110% 30%, rgba(247, 112, 3, 0.144), transparent 55%);
   pointer-events:none;
 }
 
@@ -120,8 +120,8 @@ body::after{
   display: block; 
   padding: 16px 20px;
   border-radius: var(--radius);
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(247, 112, 3, 0.144);
+  background: rgba(247, 112, 3, 0.144);
   color: var(--text);
   text-decoration: none;
   font-weight: 650;
