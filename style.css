@@ -288,3 +288,40 @@ body::after{
 .footer-btn:active{
   transform: scale(0.99);
 }
+
+.actions{
+  display:flex;
+  gap: 10px;
+  justify-content:center;
+  margin: 14px 0 6px;
+  flex-wrap: wrap;
+}
+
+.action-btn{
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: transform .14s ease, background .14s ease, border-color .14s ease;
+}
+
+.action-btn:hover{
+  background: rgba(255,255,255,.09);
+  border-color: rgba(255,255,255,.22);
+  transform: translateY(-1px);
+}
+
+.action-btn:active{
+  transform: scale(0.99);
+}
+
+.toast{
+  height: 18px;
+  margin: 6px 0 0;
+  text-align:center;
+  color: rgba(255,255,255,.70);
+  font-size: 13px;
+}
