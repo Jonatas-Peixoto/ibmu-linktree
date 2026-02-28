@@ -1,41 +1,59 @@
-document.getElementById("year").textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+  const shareBtn = document.getElementById("shareBtn");
+  const copyBtn  = document.getElementById("copyBtn");
+  const toast    = document.getElementById("toast");
 
-const shareBtn = document.getElementById("shareBtn");
-const copyBtn = document.getElementById("copyBtn");
-const toast = document.getElementById("toast");
-
-function showToast(msg){
+  function showToast(msg){
+    if (!toast) return;
     toast.textContent = msg;
     clearTimeout(showToast._t);
     showToast._t = setTimeout(() => (toast.textContent = ""), 2200);
-}
+  }
 
-shareBtn?.addEventListener("click", async () => {
+  async function copyText(text){
+    try{
+      await navigator.clipboard.writeText(text);
+      return true;
+    }catch(e){
+      try{
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.top = "-1000px";
+        document.body.appendChild(ta);
+        ta.select();
+        const ok = document.execCommand("copy");
+        document.body.removeChild(ta);
+        return ok;
+      }catch(e2){
+        return false;
+      }
+    }
+  }
+
+  shareBtn?.addEventListener("click", async () => {
     const url = window.location.href;
-    const data = {
-        title: document.title,
-        text: "IBMU • Links oficiais",
-        url
-    };
 
     try{
-        if (navigator.share){
-            await navigator.share(data);
-        } else {
-            await navigator.clipboard.writeText(url);
-            showToast("Compartilhamento não suportado - Link copiado.");
-        }
+      if (navigator.share){
+        await navigator.share({
+          title: document.title,
+          text: "IBMU • Links oficiais",
+          url
+        });
+        showToast("Compartilhado ✅");
+      } else {
+        const ok = await copyText(url);
+        showToast(ok ? "Link copiado ✅" : "Não foi possível copiar.");
+      }
     } catch (e){
-        showToast("Não foi possível compartilhar.");
+      showToast("Ação cancelada.");
     }
-});
+  });
 
-copyBtn?.addEventListener("click", async () => {
-    const url = window.location.href;
-    try{
-        await navigator.clipboard.writeText(url);
-        showToast("Link copiado ✔");
-    } catch (e){
-        showToast("Não foi possível copiar.");
-    }
+  copyBtn?.addEventListener("click", async () => {
+    const ok = await copyText(window.location.href);
+    showToast(ok ? "Link copiado ✅" : "Não foi possível copiar.");
+  });
 });
