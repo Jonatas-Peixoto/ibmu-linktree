@@ -254,3 +254,37 @@ body::after{
   font-size: 13px;
   line-height: 1.35;
 }
+
+.btn:focus-visible,
+.footer-btn:focus-visible{
+  outline: 3px solid rgba(255,255,255,.28);
+  outline-offset: 3px;
+}
+
+.btn, .footer-btn{
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.btn, .footer-btn{
+  transition: transform .14s ease, background .14s ease, border-color .14s ease, filter .14s ease;
+}
+
+@media (hover: hover){
+  .btn:hover,
+  .footer-btn:hover{
+    transform: translateY(-1px);
+  }
+}
+
+@media (hover: none){
+  .btn:hover,
+  .footer-btn:hover{
+    transform: none;
+  }
+}
+
+.btn:active,
+.footer-btn:active{
+  transform: scale(0.99);
+}
